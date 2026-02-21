@@ -249,6 +249,12 @@ def get_parser():
         type=str,
         help="Add a prefix like /url-prefix to URL: example.com:5000/url-prefix/",
     )
+    parser.add_argument(
+        "--wsgi",
+        default=False,
+        action="store_true",
+        help="Enable WSGI mode (internal use only)",
+    )
     return parser
 
 def get_args():
